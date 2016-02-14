@@ -1,0 +1,17 @@
+{
+  "name": "standard",
+  "version": "1.0.0",
+  "description": "The Standard",
+  "main": "gulpfile.js",
+  "author": "Devon Tivona and Katie Porter",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.1.1",
+    "gulp-util": "^3.0.7",
+    "modularscale-sass": "^2.1.1"
+  }
+}
