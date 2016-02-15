@@ -9,9 +9,9 @@ html
         h3 Meeeeeow. H3 here.
         h4 I'm an H4—here me roar!
         h5 H5. High five.
-        p Brownie cheesecake pastry jelly gummi bears. Tootsie roll powder icing jelly beans tootsie roll. Sugar plum sweet roll jelly. Apple pie icing chocolate apple pie muffin icing cake bonbon. Tart fruitcake tiramisu ice cream croissant chocolate bar toffee chocolate pastry. Brownie lollipop powder pudding liquorice gingerbread. Sweet roll pudding marshmallow dessert lollipop. Dragée jelly beans bear claw. Cheesecake lemon drops cupcake. Gummies dessert lemon drops liquorice.
+        p I am regular old paragraph copy. Brownie cheesecake pastry jelly gummi bears. Tootsie roll powder icing jelly beans tootsie roll. Sugar plum sweet roll jelly. Apple pie icing chocolate apple pie muffin icing cake bonbon. Tart fruitcake tiramisu ice cream croissant chocolate bar toffee chocolate pastry. Brownie lollipop powder pudding liquorice gingerbread. Sweet roll pudding marshmallow dessert lollipop. Dragée jelly beans bear claw. Cheesecake lemon drops cupcake. Gummies dessert lemon drops liquorice.
         p Sweet roll fruitcake muffin sesame snaps bear claw donut. Cake donut powder biscuit marshmallow. Jelly beans jelly beans tiramisu caramels caramels apple pie. Bear claw macaroon chocolate marshmallow dragée. Sugar plum chupa chups candy. Liquorice pudding chocolate bar cotton candy cake chocolate cake fruitcake soufflé. Topping tootsie roll cotton candy brownie brownie chupa chups gummi bears dragée. Liquorice powder macaroon jelly toffee chocolate bar.
-        p.small Brownie danish fruitcake lemon drops lemon drops liquorice. Gummi bears apple pie sweet roll cupcake chocolate cake candy canes.
+        p.small I am small paragraph copy! (My voice is super high-pitched, so I hope you are reading this that way in your head.) Brownie danish fruitcake lemon drops lemon drops liquorice. Gummi bears apple pie sweet roll cupcake chocolate cake candy canes.
         .btn-group
             a(href="#").btn-default Button
             a(href="#").btn-outlined Outlined button
@@ -30,39 +30,69 @@ html
         .row
             .col-xs-12
                 .grid-example
-        .space-1
         .row
-            .col-xs-12.col-md-6
+            .col-xs-12.col-sm-6
                 .grid-example
-            .col-xs-12.col-md-6
+            .col-xs-12.col-sm-6
                 .grid-example
-        form
-            .form-item
-                label Text field
-                input(type="text" placeholder="Type here")
-            .form-item
-                textarea(name="textarea" placeholder="Type here")
-            .form-item
-                label Checkboxes
-                input(type="checkbox" name="checkbox" value="true" checked)
-                input(type="checkbox" name="checkbox")
-                input(type="checkbox" name="checkbox")
-            .form-item
-                label Radio buttons
-                input(type="radio" name="radio1" value="true" checked)
-                | First option
-                input(type="radio" name="radio1")
-                | Second option
-                input(type="radio" name="radio1")
-                | Third option
-            .form-item
-                label Select
-                select(name="select")
-                    option(disabled selected) Choose one
-                    option First option
-                    option Second option
-                    option Third option
-            .form-item
-                input(type="file" name="file")
-            .form-item
-                input(type="Button" value="Submit form")
+        .row
+            .col-xs-12.col-sm-4
+                .grid-example
+            .col-xs-12.col-sm-4
+                .grid-example
+            .col-xs-12.col-sm-4
+                .grid-example
+        .row
+            .col-xs-12.col-sm-6.col-md-4
+                form
+                    .form-item
+                        label Text field
+                        input(type="text" placeholder="Type here")
+                    .form-item
+                        label Field with hint
+                        .form-item-group
+                            input(type="text" placeholder="Type here")
+                            span.end @pana.com
+                    .form-item.has-icon
+                        label Field with icon
+                        label
+                            img(src='images/field-lock-icon.svg')
+                            input(type="password" placeholder="Type here")
+                    .form-item.has-error
+                        label Error example
+                        input(type="text" placeholder="You done fucked up")
+                        span Ur too fat, lol
+                    .form-item
+                        label Textarea
+                        textarea(name="textarea" placeholder="Type here")
+                    .form-item
+                        label Checkboxes
+                        label
+                            input(type="checkbox" name="checkbox" value="true" checked)
+                            span First option
+                        label
+                            input(type="checkbox" name="checkbox")
+                            span Second option
+                        label
+                            input(type="checkbox" name="checkbox")
+                            span Third option
+                    .form-item
+                        label Radio buttons
+                        label
+                            input(type="radio" name="radio1" value="true" checked)
+                            span First option
+                        label
+                            input(type="radio" name="radio1")
+                            span Second option
+                        label
+                            input(type="radio" name="radio1")
+                            span Third option
+                    .form-item
+                        label Select
+                        select(name="select")
+                            option(disabled selected) Choose one
+                            option First option
+                            option Second option
+                            option Third option
+                    .form-item
+                        input(type="submit" value="Submit form")
