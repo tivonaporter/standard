@@ -36,17 +36,20 @@ select
     padding-left: ms(3)
 
 .form-item
-  margin-bottom: ms(2)
+  margin-bottom: ms(1)
   label
     display: block
     margin-bottom: ms(-3)
+
+  > span
+    display: block
+    margin-top: ms(-6)
+
   &.has-error
     label
       color: $error
     span
-      display: block
       color: $error
-      margin-top: ms(-6)
   &.has-icon
     label
       position: relative
