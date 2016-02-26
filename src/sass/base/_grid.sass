@@ -2,15 +2,15 @@
   max-width: $container-width
   margin-right: auto
   margin-left: auto
-  padding: 0 ms(1)
+  padding: 0 ms(3)
   .row
     box-sizing: border-box
     display: flex
     flex: 0 1 auto
     flex-direction: row
     flex-wrap: wrap
-    margin-right: ms(1) / -2
-    margin-left: ms(1) / -2
+    margin-right: ms(3) / -2
+    margin-left: ms(3) / -2
     &.reverse
       flex-direction: row-reverse
 
@@ -48,8 +48,8 @@
     .col-#{$name}-offset-12
       box-sizing: border-box
       flex: 0 0 auto
-      padding-right: ms(1) / 2
-      padding-left: ms(1) / 2
+      padding-right: ms(3) / 2
+      padding-left: ms(3) / 2
 
       &.top-#{$name}
         align-self: flex-start
@@ -170,6 +170,9 @@
 
       &.bottom-#{$name}
         align-items: flex-end
+
+      &.stretch-#{$name}
+        align-items: stretch
 
     .around-#{$name}
       justify-content: space-around
