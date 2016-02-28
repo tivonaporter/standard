@@ -2,6 +2,9 @@ html
   head
     title Pook's Great Adventure
     link( rel='stylesheet', href='/assets/css/app.css' )
+    link( rel='stylesheet', href='drop-theme-arrows.css' )
+    script( src='tether.min.js' )
+    script( src='drop.min.js')
   body
     .container
         h1 I am important because I am an H1.
@@ -96,3 +99,9 @@ html
                             option Third option
                     .form-item
                         input(type="submit" value="Submit form")
+        .row
+            .col-xs-12
+                a.drop-target Meow
+                .drop-content
+                    ul
+                        li Buttz

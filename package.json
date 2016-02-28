@@ -13,6 +13,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^2.1.1",
     "gulp-util": "^3.0.7",
-    "modularscale-sass": "^2.1.1"
+    "modularscale-sass": "^2.1.1",
+    "require-dir": "^0.3.0"
   }
 }
