@@ -21,25 +21,35 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li
   margin-top: 0
   margin-bottom: $base-margin
 
+h1, h2
+  line-height: 1.1
+
 h1
-  font-size: ms(6)
-  line-height: ms(7)
+  font-size: ms(4)
   font-weight: 600
+  +target(md)
+    font-size: ms(6)
 
 h2
-  font-size: ms(5)
-  line-height: ms(6)
+  font-size: ms(3)
   font-weight: 400
+  +target(md)
+    font-size: ms(5)
+
 
 h3
-  font-size: ms(3)
+  font-size: ms(2)
   line-height: ms(4)
   font-weight: 400
+  +target(md)
+    font-size: ms(3)
 
 h4
-  font-size: ms(1)
+  font-size: ms(0)
   line-height: ms(3)
   font-weight: 600
+  +target(md)
+    font-size: ms(1)
 
 h5, h6
   font-size: ms(0)
@@ -48,7 +58,7 @@ h5, h6
 
 p
   font-size: ms(1)
-  line-height: ms(2)
+  line-height: 1.4
   font-weight: 400
   &.small
     font-size: ms(0)
