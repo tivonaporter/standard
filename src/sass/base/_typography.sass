@@ -13,6 +13,15 @@
     src: url('/vendor/fonts/CalibreWeb-Semibold.ttf')
     font-weight: 600
 
+$alignment: center left right
+
+@each $target, $size in $targets
+  @each $v in $alignment
+    .#{$v}-text-#{$target}
+      +target($target)
+        &, *
+          text-align: $v
+
 *
   font-family: Calibre, sans-serif
   color: $text-color
