@@ -24,6 +24,12 @@ select
   transition: all 0.30s
   box-sizing: border-box
   -webkit-appearance: none
+  &.input-md
+    font-size: ms(1)
+    line-height: ms(2)
+    padding: ms(-2) ms(-1)
+    &::placeholder
+      font-size: ms(1)
   &::placeholder
     font-size: ms(-1)
     color: rgba($primary, 0.30)
