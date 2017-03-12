@@ -13,14 +13,18 @@
     padding: ms(-3) ms(-1)
 
 @mixin btn-color($color: $primary-pop, $outlined: false, $text-color: $white)
-  border: 2px solid $color
+  border: $border-width solid $color
+  box-shadow: none
   @if $outlined
     color: $color
     &:hover, &:active
+      color: $color
       background: rgba($color, 0.10)
   @else
     color: $text-color
     background: $color
+    &:hover
+      color: $text-color
     &.btn-hidden
       opacity: 0.0
       pointer-events: none
@@ -30,7 +34,7 @@
       pointer-events: none
     &:not(.btn-disabled):hover, &:not(.btn-disabled):active
       background: darken($color, 5%)
-      border: 2px solid darken($color, 5%)
+      border: $border-width solid darken($color, 5%)
 
 @mixin btn($color: $primary-pop, $size: md, $outlined: false, $text-color: $white)
   @include btn-color($color, $outlined, $text-color)

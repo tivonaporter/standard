@@ -17,7 +17,7 @@ textarea,
 select
   font-size: ms(0)
   background: rgba($primary, 0.05)
-  border: 2px solid transparent
+  border: $border-width solid transparent
   border-radius: $border-radius
   line-height: ms(1)
   padding: ms(-3) ms(-2)
@@ -35,14 +35,14 @@ select
     color: rgba($primary, 0.30)
   &:focus
     background: $white
-    border: 2px solid rgba($primary, 0.10)
+    border: $border-width solid rgba($primary, 0.10)
     &::placeholder
       color: rgba($primary, 0.10)
   .form-item &
     display: block
     width: 100%
   .has-error &
-    border: 2px solid $error
+    border: $border-width solid $error
   .has-icon &
     padding-left: ms(3)
 
@@ -55,6 +55,8 @@ select
   > span
     display: block
     margin-top: ms(-6)
+    &.help-block
+      color: rgba($primary, 0.40)
 
   &.has-error
     label
@@ -89,7 +91,6 @@ select
 
 label
   font-size: ms(-1)
-  font-weight: 600
   span
     font-weight: 400
 
