@@ -4,15 +4,27 @@ ul.tabs
   margin: 0
   padding: 0
   li
+    position: relative
     display: inline-block
-    margin: 0 ms(-2)
-    padding: ms(-2)
+    margin: 0
+    padding: 0
     &.active
-      border-bottom: $border-width solid $primary-pop
       a
-        color: $primary-pop
+        border-color: $primary-pop
     a
+      border-bottom: $border-width solid transparent
+      display: flex
+      align-items: center
+      margin: 0 ms(-6)
+      padding: ms(-3) ms(-4)
       text-decoration: none
       box-shadow: none
+      height: ms(0)
+      span
+        font-size: ms(0)
+        line-height: ms(0)
+        color: $primary-pop
+      &:hover
+        color: $text-color
     p
       display: inline-block
