@@ -22,42 +22,32 @@ $directions: ("t" : "top", "b" : "bottom", "l" : "left", "r" : "right")
           @else
             padding-#{$k}: ms($i) !important
 
-.space-1
-  height: ms(1)
+.d-inline-block
+  display: inline-block
 
-.space-2
-  height: ms(2)
+.d-flex__flex-grow
+  flex-grow: 1
 
-.space-3
-  height: ms(3)
+.d-flex
+  display: flex
+  &.d-flex--align-start
+    align-items: flex-start
+  &.d-flex--align-middle
+    align-items: center
+  &.d-flex--align-end
+    align-items: flex-end
+  &.d-flex--align-stretch
+    align-items: stretch
+  &.d-flex--space-around
+    justify-content: space-around
+  &.d-flex--space-between
+    justify-content: space-between
+  &.d-flex--justify-end
+    justify-content: flex-end
+  &.d-flex--justify-start
+    justify-content: flex-start
+  &.d-flex--column
+    flex-direction: column
 
-.space-4
-  height: ms(4)
-
-.space-5
-  height: ms(5)
-
-.space-6
-  height: ms(6)
-
-.space-7
-  height: ms(7)
-
-.space-8
-  height: ms(8)
-
-.space-9
-  height: ms(9)
-
-.space-10
-  height: ms(10)
-
-.pad-ends
-  padding-top: ms(6)
-  padding-bottom: ms(6)
-
-.margin-right
-  margin-right: ms(1)
-
-.margin-left
-  margin-left: ms(1)
+.d-none
+  display: none !important

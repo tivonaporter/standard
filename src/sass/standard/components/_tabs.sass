@@ -8,23 +8,32 @@ ul.tabs
     display: inline-block
     margin: 0
     padding: 0
+    cursor: pointer
     &.active
       a
         border-color: $primary-pop
+        &, *
+          color: $primary-pop
+        &:hover
+          border-color: $primary-pop
     a
+      &:hover
+        border-color: transparentize($primary-pop, 0.6)
       border-bottom: $border-width solid transparent
+      position: relative
       display: flex
       align-items: center
       margin: 0 ms(-6)
       padding: ms(-3) ms(-4)
+      user-select: none
       text-decoration: none
       box-shadow: none
       height: ms(0)
-      span
+      &, *
         font-size: ms(0)
         line-height: ms(0)
-        color: $primary-pop
-      &:hover
         color: $text-color
+      .count-indicator
+        margin-left: ms(-4)
     p
       display: inline-block

@@ -1,0 +1,128 @@
+table
+  border-collapse: separate
+  border-spacing: 0
+  border: 1px solid $border-color
+  width: 100%
+  border-radius: $border-radius
+  background: white
+
+  &.responsive tbody
+    tr
+      display: flex
+      flex-direction: row
+      flex-wrap: wrap
+      background: white
+    td, th
+      box-sizing: border-box
+      display: block
+      flex-basis: 50%
+      flex-grow: 1
+      flex-shrink: 1
+      +target(md)
+        flex-basis: 25%
+    td
+      text-align: right
+      +target(md)
+        text-align: center
+    th
+      text-align: left
+      +target(md)
+        text-align: center
+        &:first-child
+          text-align: left
+
+  &.compact
+    td, th
+      padding: ms(-2)
+
+  .placeholder
+    padding: ms(5)
+    background: white
+    text-align: center
+    line-height: 1.4
+
+  .wrap-column
+    word-break: break-all
+
+  .btn-wrapper
+    display: inline-block
+
+td, th
+  padding: ms(-4)
+  position: relative
+  &:last-child:not(:first-child):not(.stay-left)
+    text-align: right
+
+.tr--success
+  td, th
+    background: $success-80
+
+.tr--error
+  td, th
+    background: $error-80
+
+.tr--info
+  td, th
+    background: $info-80
+
+.tr--warning
+  td, th
+    background: $warning-80
+
+tbody.clickable
+  > tr:first-child:hover
+    cursor: pointer
+    background: $border-color
+  &.selected > tr
+    background: $primary-pop !important
+
+tr.clickable
+  cursor: pointer
+  &:hover
+    td
+      background: $border-color
+  &.selected
+    background: $primary-pop
+    &:hover
+      td
+        background: $primary-pop
+
+th
+  text-align: left
+  &.header
+    padding: ms(1)
+    cursor: pointer
+  &.headerSortUp,
+  &.headerSortDown
+    color: $primary-pop
+    &:after
+      content: ""
+      display: inline-block
+      width: 0
+      height: 0
+      margin-right: ms(-1) * -1
+      margin-bottom: 2px
+      margin-left: ms(-4)
+      border-right: 4px solid transparent
+      border-left: 4px solid transparent
+  &.headerSortUp:after
+    border-top: 4px solid
+  &.headerSortDown:after
+    border-bottom: 4px solid
+
+tbody
+  tr
+    &:nth-child(odd)
+      background: $secondary
+    &.pending
+      background: rgba(233, 232, 68, 0.15)
+
+tfoot
+  th
+    border-top: 1px solid $border-color
+
+.table--accordion
+  > tbody:nth-child(odd) > tr
+    background: $secondary
+  > tbody:nth-child(even) > tr
+    background: white
