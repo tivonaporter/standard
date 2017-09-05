@@ -85,7 +85,7 @@ textarea
   margin-bottom: ms(1)
   position: relative
 
-  input, textarea, select
+  input, textarea, select, .selectize-control
     margin-bottom: ms(-4)
 
   label
@@ -119,10 +119,8 @@ textarea
     .selectize-input
       border-color: $error
   &.form-item--icon
-    label
+    div
       position: relative
-      &:last-of-type
-        margin: 0
     img
       position: absolute
       top: ($input-height - ms(0)) / 2
@@ -158,8 +156,11 @@ textarea
   position: relative
 
 // Custom checkboxes and radio
-
-$custom-icon-size: ms(2)
+$custom-icon-size: null
+@if ms(2) % 2 == 0
+  $custom-icon-size: ms(2)
+@else
+  $custom-icon-size: ms(2) - 1
 $dot-size: floor($custom-icon-size / 2)
 
 .custom-radio-group, .custom-checkbox-group
