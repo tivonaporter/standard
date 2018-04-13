@@ -22,12 +22,17 @@
         padding: 0
         transition: padding 20ms ease-in-out
 
-
 .pane > .list-group
   border-radius: 0
   box-shadow: none
   border: none
   border-bottom: 1px solid $border-color
+
+.pane__row
+  background-color: transparentize($border-color, 0.7)
+  padding: ms(-5)
+  &:nth-child(odd)
+    background-color: $white
 
 .pane__content
   padding: ms(0)

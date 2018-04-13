@@ -16,3 +16,19 @@
 
 .alert--warning
   background: $warning
+
+.alert--close
+  align-items: center
+  justify-content: space-between
+  position: relative
+  min-height: ms(4)
+  box-sizing: border-box
+  padding-right: ms(4)
+  display: flex
+  &, *
+    color: $white
+  .btn-close
+    width: ms(4)
+    height: ms(4)
+    &::before
+      color: $white
