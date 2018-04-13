@@ -1,0 +1,228 @@
+// New
+.new-message__responses-btn
+  border-right: none
+
+// Shared
+.message__details
+  display: flex
+  align-items: center
+  margin-bottom: ms(-2)
+  > *:not(:last-child)
+    margin-right: ms(-2)
+
+.message__cards
+  align-self: stretch
+
+.message
+  position: relative
+  transform: translate3d(0, 0, 0)
+  transition: transform 0.2s
+  &:first-child .message__bubble-wrapper
+      padding-top: ms(-4)
+      border-top-left-radius: $border-radius
+  &:hover
+    transform: translate3d(ms(-6), 0, 0)
+    .message__actions
+      display: flex
+
+.message__actions
+  display: none
+  position: absolute
+  left: (ms(1) + ms(-2)) * -1
+  padding-right: ms(-2)
+  flex-direction: column
+  z-index: $z-index--message__actions
+  a
+    box-shadow: none
+    margin-bottom: ms(-4)
+  img, svg
+    height: ms(1)
+    width: ms(1)
+    cursor: pointer
+    fill: $primary-40
+    &:hover
+      fill: $primary-pop
+
+.message__bubble-wrapper
+  border-left: $border-width solid white
+  display: flex
+  align-items: flex-start
+  flex-direction: column
+  height: 100%
+  padding: 0 ms(-4)
+
+.message__bubble-wrapper--right
+  align-items: flex-end
+  *
+    text-align: left
+  .chat-details, .chat-actions
+    text-align: right
+    justify-content: flex-end
+  .message__bubble
+    background-color: rgba($primary-pop, 0.8)
+    text-align: right
+    *
+      color: white
+
+.message__bubble
+  max-width: 95%
+  text-align: left
+  background-color: $secondary-darker
+  display: inline-block
+  padding: ms(-4) ms(-3)
+  border-radius: $border-radius * 3
+  margin-bottom: ms(-4)
+  text-align: left
+  box-sizing: border-box
+  *
+    color: $primary-pop
+  p
+    word-wrap: break-word
+    &:last-child
+      margin-bottom: 0
+
+.message__image-bubble
+  border-radius: $border-radius
+  border: 1px solid $border-color
+  overflow: hidden
+  display: inline-block
+  margin-bottom: ms(-4)
+  img
+    max-width: 100%
+    max-height: ms(12)
+    display: block
+
+// Email
+.email-message
+  margin-top: ms(-4)
+  margin-bottom: ms(-4)
+  border-radius: $border-radius
+  display: inline-block
+  width: 95%
+  background: white
+
+.email-message__body
+  padding: ms(-2)
+  line-height: 1.3
+
+.email-message__footer
+  padding: ms(-2)
+  border-top: 1px solid $border-color
+  display: flex
+  align-items: center
+  > *
+    margin: 0
+  > *:not(:last-child)
+    margin-right: ms(-4)
+
+.email-message__body--long-email
+  overflow: hidden
+  height: 100%
+  &:hover
+    cursor: pointer
+
+.email-message__body--condensed
+  height: ms(8)
+  overflow: hidden
+
+.email-message__image
+  img
+    max-width: 100%
+
+.email-message__header
+  border-bottom: 1px solid $border-color
+  padding: ms(-2)
+  p
+    margin-bottom: 0
+
+// Chat Rating
+$face-size: 16px
+
+.chat-rating-wrapper
+  display: flex
+  align-items: center
+  text-align: center
+  justify-content: space-around
+  float: right
+  background-color: rgba(0, 0, 0, 0.1)
+  border-radius: $face-size + $border-width * 2
+  padding: $border-width
+  width: $face-size * 3 + $border-width * 3
+  &[data-tooltip-content]
+    cursor: default
+    &:after
+      content: none
+  .chat-thread.left &
+    margin-right: ms(-4)
+  .chat-thread.right &
+    margin-left: ms(-4)
+  transition: all 120ms ease-in-out
+  .chat-rating-item, .chat-rating-clear
+    text-align: center
+    cursor: pointer
+    height: $face-size
+    width: $face-size
+    img
+      display: block
+      height: $face-size
+      width: $face-size
+    svg
+      fill: rgba(0, 0, 0, 0.3)
+    &:hover
+      opacity: 1 !important
+  &.missing-rating
+    background-color: #fe334b
+    .chat-rating-item
+      &.hide
+        display: block !important
+    .chat-rating-clear
+      display: none
+  &:hover
+    background-color: rgba(0, 0, 0, 0.1)
+    .chat-rating-item, .chat-rating-clear
+      opacity: 0.3
+  &.has-rating
+    width: $face-size * 2 + $border-width * 2
+    .chat-rating-item
+      &.hide
+        display: none
+      &.show
+
+.chat-task__event,
+.chat-task__card
+  margin: 0 ms(-4)
+  box-sizing: border-box
+
+.chat-task__card
+  border: solid 1px $border-color
+  border-radius: ms(-6)
+  padding: ms(-4)
+  margin-bottom: ms(-4)
+  margin-top: ms(-4)
+  background: white
+  z-index: $z-index--timeline__circle
+  position: relative
+
+.chat-task__event
+  padding: ms(-4)
+  padding-left: 0
+  z-index: $z-index--timeline__line
+
+$circle-size: ms(-1)
+
+.status--timeline
+  position: relative
+  .status__circle
+    height: $circle-size
+    width: $circle-size
+    border-radius: $circle-size
+    position: relative
+    box-shadow: inset 0 0 0 $border-width $primary-pop, inset 0 0 0 $border-width * 2 white
+
+.status--timeline__line
+  position: absolute
+  top: ms(-8)
+  left: ($circle-size - $border-width) / 2
+  bottom: ms(-4) * -3
+  width: $border-width
+  background-color: $primary-pop

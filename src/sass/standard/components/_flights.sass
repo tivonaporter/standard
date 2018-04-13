@@ -1,0 +1,123 @@
+// Filters
+.drop-element .drop-content
+  .airline-filter-option
+    display: flex
+    align-items: center
+    justify-content: flex-startf
+    margin: ms(-4) ms(-2)
+    .airline-filter-option__button
+      margin: 0
+      padding: 0
+      margin-right: ms(-4)
+      img, svg
+        display: block
+        cursor: pointer
+      &.airline-filter-option__button--error
+        svg
+          fill: $error
+      &.airline-filter-option__button--success
+        svg
+          fill: $success
+
+.time-filter
+  display: flex
+  flex-direction: column
+  padding: ms(0)
+  min-width: ms(12)
+  > *:not(:last-child)
+    margin-bottom: ms(0)
+  .form-item label
+    margin-bottom: 0
+
+.time-filter__header
+  display: flex
+  justify-content: space-between
+  > *:first-child
+    margin-right: ms(0)
+  .time-filter__value
+    color: $primary-40
+
+// Results
+.flight-result-group
+  margin-top: ms(1)
+  min-height: ms(7)
+  position: relative
+
+.flight-result
+  position: relative
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: ms(-3)
+  border-top: 1px solid $border-color
+  &.flight-result--selected
+    padding: ms(0)
+    align-items: flex-start
+    justify-content: flex-start
+    .flight-result__section
+      flex: 1
+    .flight-result__section--large
+      flex: 5
+    .flight-result__timing
+      margin-left: ms(0)
+      align-items: flex-start
+
+.flight-result--selectable
+  &:hover
+    cursor: pointer
+    background: $border-color
+
+.flight-result__content
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+.flight-result__timing
+  display: flex
+  flex-direction: row
+  align-items: center
+  img
+    display: block
+    height: ms(3)
+    width: ms(3)
+    margin-right: ms(-3)
+    border: 1px solid $border-color
+    border-radius: $border-radius
+
+// Search
+.flight-search-leg
+  display: flex
+  margin-bottom: ms(0)
+  .btn-close
+    position: relative
+    height: ms(4)
+    width: ms(4)
+  .form-item
+    flex-grow: 1
+    flex: 1
+    margin-right: ms(0)
+    margin-bottom: 0
+    height: $input-height
+    &:last-of-type
+      margin-right: 0
+    &:last-child
+      margin-right: ms(4)
+
+.flight-result:not(.flight-result--selected)
+  .flight-result__section
+    flex: 2
+    &.flight-result__section--large
+      flex: 6
+    &:last-child
+      flex: 3
+      .flight-result__content
+        align-items: flex-end
+
+.flight-search__header
+  margin-bottom: ms(0)
+
+.flight-search__voluntary-changes-toggle
+  .form-item,
+  label,
+  input
+    margin-bottom: 0

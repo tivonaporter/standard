@@ -1,0 +1,99 @@
+$height: ms(5)
+$margin: ms(-8)
+$box-size: $height - $margin * 2 - 2px
+
+.dz-clickable
+  position: relative
+  min-height: ms(5)
+  border-radius: $border-radius
+  border: 1px solid $border-color
+  display: flex
+  overflow-x: scroll
+  width: 100%
+  overflow-scrolling: touch
+  &::before
+    content: "Click or drop files here to upload"
+    font-size: ms(0)
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    text-align: center
+    line-height: $height
+    transition: all 0.3s
+    opacity: 0
+  &:empty::before
+    opacity: 1
+  .dz-preview
+    flex: 0 0 auto
+    position: relative
+    width: $box-size
+    height: $box-size
+    margin: $margin
+    margin-right: 0
+    margin-bottom: 0
+    border: 1px solid $border-color
+    border-radius: $border-radius
+    &:last-child
+      margin-right: $margin
+    .dz-details
+      display: none
+    .dz-image
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      overflow: hidden
+      img
+        width: $box-size
+        height: $box-size
+        object-fit: cover
+      &::after
+        transition: all 0.3s
+        content: " "
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgba($primary-pop, 0.6)
+    .dz-remove
+      background: rgba($primary-pop, 0.6)
+      color: white
+      opacity: 0
+      transition: all 0.3s
+      line-height: $box-size
+      text-align: center
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      cursor: pointer
+    &.dz-error .dz-image::after
+      background: rgba($primary-pop, 0.6)
+    &.dz-success .dz-image::after
+      background: none
+    &.dz-success .dz-progress
+      opacity: 0
+    &.dz-success:hover
+      .dz-remove
+        opacity: 1
+    .dz-progress
+      display: block
+      transition: all 0.3s
+      height: ms(-4)
+      border: 1px solid $border-color
+      position: absolute
+      left: ms(-5)
+      right: ms(-5)
+      top: 50%
+      margin-top: ms(-4) / -2
+      border-radius: $border-radius
+      .dz-upload
+        display: block
+        height: 100%
+        width: 0
+        background: $quinary-pop
