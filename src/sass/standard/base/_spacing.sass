@@ -10,6 +10,10 @@ $directions: ("t" : "top", "b" : "bottom", "l" : "left", "r" : "right")
             margin-#{$k}: 0 !important
           @else
             margin-#{$k}: ms($i) !important
+      @if $i != 0
+        .m-#{$v}-#{$target}-neg-#{$i}
+          +target($target)
+            margin-#{$k}: ms($i * -1) !important
 
 @each $target, $size in $targets
   /* #{$target} */
@@ -18,9 +22,13 @@ $directions: ("t" : "top", "b" : "bottom", "l" : "left", "r" : "right")
       .p-#{$v}-#{$target}-#{$i}
         +target($target)
           @if $i == 0
-            margin-#{$k}: 0 !important
+            padding-#{$k}: 0 !important
           @else
             padding-#{$k}: ms($i) !important
+      @if $i != 0
+        .p-#{$v}-#{$target}-neg-#{$i}
+          +target($target)
+            padding-#{$k}: ms($i * -1) !important
 
 .d-inline-block
   display: inline-block

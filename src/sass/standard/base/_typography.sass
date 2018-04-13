@@ -74,12 +74,14 @@ p, li
 
 p, li, a, span, b, strong
   &.small
-    font-size: ms(0)
-    line-height: ms(1)
+    &, *
+      font-size: ms(0)
+      line-height: ms(1)
   &.wee
-    // Fuck it
-    font-size: 11px
-    line-height: ms(0)
+    &, *
+      // Fuck it
+      font-size: 11px
+      line-height: ms(0)
 
 h1, h2, h3, h4, h5, h6, p, li, a, span
   &.fade
